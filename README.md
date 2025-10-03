@@ -28,11 +28,11 @@ The post_label can be downloaded via [link](https://portland-my.sharepoint.com/:
 - Directory Structure
 Datasets/
 └── 01_Multi-Atlas_Labeling
-    ├── img
+    ├── img/
         └──img0001.nii.gz
         ├── ... 
-    ├── label
-    └──post_label
+    ├── label/
+    └──post_label/
     02_TCIA_Pancreas-CT
     ...
     15_3DIRCADb
