@@ -75,5 +75,6 @@ If you find the project useful, please consider citing:
 
 ## TODO List
 - Release pretrained model weights and provide a simple inference pipeline.
+- Release well-organized and preprocessed 12 datasets to easy adoption
 
 
