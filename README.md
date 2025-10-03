@@ -25,7 +25,8 @@ This repository is based on PyTorch 2.2.2, CUDA 11.8, and Python 3.９.７. All 
 The post_label can be downloaded via [link](https://portland-my.sharepoint.com/:u:/g/personal/jliu288-c_my_cityu_edu_hk/EX04Ilv4zh1Lm_HB0wnpaykB4Slef043RVWhX3lN05gylw?e=qG0DOS).
 (see https://github.com/ljwztc/CLIP-Driven-Universal-Model/blob/main/README.md)
 
-### Directory Structure
+- Directory Structure
+```
 Datasets/
 ├── 01_Multi-Atlas_Labeling
 │   ├── img
@@ -38,7 +39,7 @@ Datasets/
 ├── 15_3DIRCADb
 ├── 16_TotalsegmentatorV2
 └── 17_AbdomenAtlas_1_0_Mini
-
+```
 
 ## Usage
 ### Train:
