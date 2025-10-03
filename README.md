@@ -26,6 +26,7 @@ The post_label can be downloaded via [link](https://portland-my.sharepoint.com/:
 (see https://github.com/ljwztc/CLIP-Driven-Universal-Model/blob/main/README.md)
 
 - Directory Structure
+“”“
 Datasets/
 └── 01_Multi-Atlas_Labeling
     ├── img/
@@ -39,6 +40,7 @@ Datasets/
     16_TotalsegmentatorV2
     17_AbdomenAtlas_1_0_Mini
 
+”“”
 
 ## Usage
 ### Train:
