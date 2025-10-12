@@ -186,10 +186,12 @@ class Debiased_Universal_Medical_Segmenation_Model(nn.Module):
 
         self.text_embed_dim = 768
 
-        text_tokenizer = AutoTokenizer.from_pretrained("/mnt/nas/yunboxiang.ybx/TMI_rebuttal/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
-                                                       local_files_only=True)
-        self.text_encoder = AutoModel.from_pretrained("/mnt/nas/yunboxiang.ybx/TMI_rebuttal/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
-                                                      local_files_only=True)
+        # text_tokenizer = AutoTokenizer.from_pretrained("/mnt/nas/yunboxiang.ybx/TMI_rebuttal/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+        #                                                local_files_only=True)
+        # self.text_encoder = AutoModel.from_pretrained("/mnt/nas/yunboxiang.ybx/TMI_rebuttal/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+        #                                               local_files_only=True)
+        text_tokenizer = AutoTokenizer.from_pretrained("microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext")
+        self.text_encoder = AutoModel.from_pretrained("microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext")
 
         ############ load organ-level prompt (medical prior) ###################
         self.register_buffer('organ_embedding', torch.randn(32, word_prompt_number, self.text_embed_dim))
