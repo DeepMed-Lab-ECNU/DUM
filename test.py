@@ -229,8 +229,6 @@ def main():
     parser.add_argument('--store_num', default=10, type=int, help='Store model how often')
     parser.add_argument('--lr', default=1e-4, type=float, help='Learning rate')
     parser.add_argument('--weight_decay', default=1e-5, type=float, help='Weight Decay')
-    parser.add_argument('--backbone', default='unet', help='backbone [swinunetr or unet]')
-
 
     ## dataset
     parser.add_argument('--dataset_list', nargs='+', default=['PAOT_10_inner', 'PAOT_123457891213']) # 'PAOT', 'felix'
@@ -241,8 +239,6 @@ def main():
     ### external15
     ### external16_totalseg
     ### external17
-    parser.add_argument('--data_root_path', default='/home/jliu288/data/whole_organ/', help='data root path')
-    parser.add_argument('--data_txt_path', default='./dataset/dataset_list/', help='data txt path')
     parser.add_argument('--batch_size', default=1, type=int, help='batch size')
     parser.add_argument('--num_workers', default=4, type=int, help='workers numebr for DataLoader')
     parser.add_argument('--a_min', default=-175, type=float, help='a_min in ScaleIntensityRanged')
