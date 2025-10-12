@@ -5,7 +5,7 @@ by Boxiang Yun, Shitian Zhao, Qingli Li, Alex Kot, Yan Wang*
 A PyTorch implementation of **DUM**, a causal debiasing framework that enhances generalization in universal medical image segmentation by mitigating knowledge bias from text prompts. DUM leverages both organ-level semantic priors and instance-level visual context to improve robustness across diverse clinical scenarios. Based on the paper: [*Debiasing Medical Knowledge for Prompting Universal Model in CT Image Segmentation*](https://ieeexplore.ieee.org/abstract/document/11080474/).
 
 ## Requirements
-This repository is based on PyTorch 2.2.2, CUDA 11.8, and Python 3.９.７. All experiments in our paper were conducted on NVIDIA GeForce RTX 3090 GPU with an identical experimental setting.
+This repository is based on PyTorch 2.2.2, CUDA 11.8, and Python 3.9.7. All experiments in our paper were conducted on NVIDIA GeForce RTX 3090 GPU with an identical experimental setting.
 
 ## Data Preparation
 
