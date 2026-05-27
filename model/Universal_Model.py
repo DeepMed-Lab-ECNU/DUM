@@ -263,9 +263,10 @@ class Debiased_Universal_Medical_Segmenation_Model(nn.Module):
             word_embedding_incontext = torch.repeat_interleave(word_embedding_incontext.unsqueeze(0), bs, 0)
             oo_embedding, attn_weights = self.transformer_decoders(vision_embedding.transpose(1, 0), word_embedding_incontext.transpose(1, 0), pos=None) # B N C 
         else:
-            ############## only organ-level feature as prompt ############################
-            word_embedding = F.relu(self.text_to_vision(word_embedding)).reshape(-1, self.final_num_features)#, 'b n l c -> b (n l) c')#.reshape(bs, -1, self.final_num_features)  # N, C
-            word_embedding = torch.repeat_interleave(word_embedding.unsqueeze(0), bs, 0)
+            ############## only organ-level feature as prompt ############################            
+            word_embedding = self.text_encoder.encoder(word_embedding)['last_hidden_state'] # 32, 384,768  
+            word_embedding = F.relu(self.text_to_vision(word_embedding))
+            word_embedding = rearrange(torch.repeat_interleave(word_embedding.unsqueeze(0), bs, 0), 'b n l c -> b (n l) c')
             oo_embedding, attn_weights = self.transformer_decoders(vision_embedding.transpose(1, 0), word_embedding.transpose(1, 0), pos=None) # B N C
         
         ############################## fusion prompt and visual feautres #################################
